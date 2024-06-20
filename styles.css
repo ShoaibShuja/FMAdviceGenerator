@@ -1,0 +1,144 @@
+:root {
+  --color-light-cyan: hsl(193, 38%, 86%);
+  --color-neon-green: hsl(150, 100%, 66%);
+  --color-grayish-blue: hsl(217, 19%, 38%);
+  --color-dark-grayish-blue: hsl(217, 19%, 24%);
+  --color-dark-blue: hsl(218, 23%, 16%);
+
+  --font-family: 'Manrope', sans-serif;
+  --font-size-quote: 28px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background: var(--color-dark-blue);
+}
+
+.main__container {
+  width: 30%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  border-radius: 1rem;
+  padding: 3rem;
+
+  background: var(--color-dark-grayish-blue);
+}
+
+#advise {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .2rem;
+  color: var(--color-neon-green);
+}
+
+#quote {
+  font-weight: 800;
+  text-align: center;
+
+  color: var(--color-light-cyan);
+}
+
+#quote i {
+  font-size: .6rem;
+  text-align: center;
+  vertical-align: 7px;
+}
+
+#divider__image {
+  width: 100%;
+  padding: 1rem;
+}
+
+#generate__button {
+  position: absolute;
+  bottom: -23px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: var(--color-neon-green);
+
+  cursor: pointer;
+}
+
+#generate__button:hover {
+  box-shadow: 0 0 1rem var(--color-neon-green);
+}
+
+#dice__image {
+  width: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .main__container {
+    width: 50%;
+  }
+
+  #advice {
+    font-size: 1rem;
+  }
+
+  #quote {
+    font-size: 2rem;
+  }
+
+  #quote i {
+    vertical-align: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main__container {
+    width: 90%;
+  }
+
+  #quote i {
+    vertical-align: 10px;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-light-cyan);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--color-neon-green);
+}
+
+.attribution a:hover {
+  box-shadow:  0 0 1rem var(--color-neon-green);
+}
